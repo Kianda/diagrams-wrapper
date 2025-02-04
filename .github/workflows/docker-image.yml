@@ -32,7 +32,7 @@ jobs:
           echo "MY_VERSION=${VERSION#v}" >> $GITHUB_ENV  # Removes the "v" prefix   
 
       - name: Stop after this step
-        if: ${{ length(env.UPSTREAM_VERSION) > 1 && length(env.MY_VERSION) > 1 }}
+        if: ${{ env.UPSTREAM_VERSION != '' && env.MY_VERSION != '' }}
         run: |
           echo "Stopping the workflow."               
 
