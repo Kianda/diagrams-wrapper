@@ -1,0 +1,10 @@
+services:
+
+  diagrams-wrapper:
+    image: kianda/diagrams-wrapper:latest
+    container_name: "diagrams-wrapper"
+    environment:
+      - TIMEZONE=Europe/Rome
+    volumes:
+      - "${PWD}/data:/diagrams-data"
+    restart: 'unless-stopped'
