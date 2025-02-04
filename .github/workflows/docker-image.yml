@@ -1,11 +1,13 @@
 name: Build and Push Docker Image
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - 'v*'
+  # Manually trigger the workflow via the GitHub UI
+  workflow_dispatch:
+  #push:
+  #  branches:
+  #    - main
+  #  tags:
+  #    - 'v*'
 
 jobs:
   build-and-push:
