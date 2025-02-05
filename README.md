@@ -36,7 +36,7 @@ chmod +x control_panel.sh
 
 ## Provided docker image
 
-The *control_panel.sh* is working with my provided image (*kianda/diagrams-wrapper*) but, if you want, you can build your own!
+The *control_panel.sh* is working with my provided image (*[kianda/diagrams-wrapper](https://hub.docker.com/r/kianda/diagrams-wrapper)*) but, if you want, you can build your own!
 
 ## Build your own image
 
