@@ -6,7 +6,7 @@ This is just a low-effort wrapper built for [Diagrams](https://github.com/mingra
 
 1. Clone this repo
 2. Run the *control_panel.sh* file and *"Start"* to launch this wrapper
-3. Write your code inside *data/code* folder
+3. Write your code inside *data/code* folder (check *data/code_examples* for examples)
 4. Automagically find your generated images inside *data/images* (after every file save)
 
 > NOTE: Once the container has been started just forget about it and focus on the code.

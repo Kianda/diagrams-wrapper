@@ -12,6 +12,7 @@ do
     case $opt in
         "Start")
             echo "(∩｀-´)⊃━☆ﾟ.*･｡ﾟ"
+            mkdir -p 'data/code'
             docker inspect diagrams-wrapper >/dev/null 2>&1 && docker rm -f diagrams-wrapper
             docker compose up -d --force-recreate
             ;;
