@@ -1,12 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Clearing images folder!"
 
 rm -rf /diagrams-data/images/*
 
-echo "Generating all images! Check the logs!"
+echo "Generating all images!"
 
-# THIS IS KIND-OF-NASTY
-find "/diagrams-data/code" -type f \( -name "*.py" -o -name "*.PY" \) -exec sh -c "sleep 0.25 && echo '' >> {}" \;
+# Call the generator directly, one *.py at a time. This used to append a newline
+# to every *.py just to wake up the file-monitor, which edited all your source
+# files only to redraw them. Nothing is modified now.
+find "/diagrams-data/code" -type f \( -name "*.py" -o -name "*.PY" \) \
+  -exec /bin/sh /diagrams-scripts/generate.sh {} \;
 
 echo "DONE!"
